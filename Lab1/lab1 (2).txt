@@ -1,0 +1,42 @@
+package com.mycompany.lab1;
+/**
+ *
+ * @author popu_
+ */
+public class Lab1 {
+
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+        String[] languages = {"C", "C++", "C#", "Python", "Go", "Rust", "JavaScript", "PHP", "Swift", "Java"};
+        int n = (int) (Math.random() * 1_000_000);
+        n=n*3;
+        n=n+21;
+        n=n+255;
+        n=n*6;
+        int suma_cif=0;
+        
+        while (n>0)
+        {
+            suma_cif=suma_cif+n%10;
+            n=n/10;
+        }
+        
+        
+        while(suma_cif>10)
+        {
+            int suma_cif2=suma_cif;
+            suma_cif=0;
+           
+                while(suma_cif2>10)
+                {
+                    suma_cif=suma_cif+suma_cif2%10;
+                    suma_cif2=suma_cif2/10;
+                }
+        } 
+         System.out.println("Willy-nilly, this semester I will learn " + languages[suma_cif]);
+         
+        } 
+        
+
+    }
+
